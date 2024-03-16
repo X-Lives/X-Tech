@@ -76,8 +76,8 @@ export default {
       const months = [
         "一月", "二月", "三月",
         "四月", "五月", "六月", "七月",
-        "八月", "September", "October",
-        "November", "December"
+        "八月", "九月", "十月",
+        "十一月", "十二月"
       ];
       var month = GameObject.date.getMonth();
       var day = GameObject.date.getDate();
@@ -113,7 +113,7 @@ export default {
       this.$router.replace("/" + path.join("/"));
     },
     unreleasedContentUrl() {
-      return "https://edge.twotech.twohoursonelife.com" + window.location.pathname;
+      return "https://edge.xlives.tech" + window.location.pathname;
     },
     releasedContentUrl() {
       return "https://xlives.top" + window.location.pathname;

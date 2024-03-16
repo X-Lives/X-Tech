@@ -30,7 +30,7 @@
         </li>
         <li v-if="moveType">移动行为: {{moveType}}</li>
         <li v-if="numUses">
-          Number of {{useWord}}s: {{numUses}}
+          总{{useWord}}次数: {{numUses}}
           <span class="helpTip" v-tippy :title="numMovesTip" v-if="numMovesTip">?</span>
         </li>
         <li v-if="totalFood">食物总计: {{totalFood}}</li>

@@ -8,11 +8,11 @@
         :object="object" />
       <div class="recipeHeadlineText">
         <h2><router-link :to="object.url()">{{object.name}}</router-link></h2>
-        <h3>Crafting Recipe</h3>
+        <h3>制作配方</h3>
       </div>
     </div>
 
-    <h3 v-if="!object.data">Loading...</h3>
+    <h3 v-if="!object.data">加载中...</h3>
     <div v-else class="steps">
       <RecipeIngredients v-if="object.data.recipe.ingredients" :ingredients="object.data.recipe.ingredients" :rightClickObject="filterObject" />
 
@@ -25,7 +25,7 @@
           hover="true"
           clickable="true"
           :object="filteredObject" />
-        <a href="#" @click.prevent="filterObject(null)">Clear Filter</a>
+        <a href="#" @click.prevent="filterObject(null)">清除过滤器</a>
       </div>
 
       <RecipeStep

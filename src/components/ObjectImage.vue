@@ -83,19 +83,19 @@ export default {
       }
 
       if (this.player)
-        return "Player"
+        return "玩家"
 
       if (this.wildcard)
-        return "Wildcard Object"
+        return "通配符对象"
 
       if (this.hand)
-        return "Empty hands"
+        return "空手"
 
       if (this.ground)
-        return "Empty ground"
+        return "空地"
 
       if (this.decay)
-        return this.decay.replace("s", " second").replace("m", " minute").replace("h", " hour") + (parseInt(this.decay) != 1 ? 's' : '');
+        return this.decay.replace("s", " 秒").replace("m", " 分钟").replace("h", " 小时") + (parseInt(this.decay) != 1 ? 's' : '');
     },
     weightPercent () {
       return Math.round(this.weight*1000)/10.0;
