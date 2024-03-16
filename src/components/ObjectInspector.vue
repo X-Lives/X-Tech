@@ -216,7 +216,7 @@ export default {
     },
     containerText() {
       if (!this.object.data.numSlots) return;
-      return `容纳 ${this.object.data.numSlots} ${this.object.slotSize()} items`;
+      return `容纳 ${this.object.data.numSlots} ${this.object.slotSize()} 物品`;
     },
     pickupText() {
       if (!this.object.data.minPickupAge) return;

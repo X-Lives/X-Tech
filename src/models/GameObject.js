@@ -162,10 +162,10 @@ export default class GameObject {
   }
 
   sizeText(size) {
-    if (size == 3) return "Extra Large";
-    if (size > 1) return "Large";
-    if (size == 1) return "Small";
-    return "Tiny";
+    if (size == 3) return "超大";
+    if (size > 1) return "大";
+    if (size == 1) return "小";
+    return "极小";
   }
 
   slotSize() {
@@ -179,10 +179,10 @@ export default class GameObject {
   spawnText() {
     if (!this.mapChanceData()) return;
     const level = Math.ceil(parseFloat(this.mapChanceData())*15)-1;
-    if (level == 0) return "Very Rare";
-    if (level < 3) return "Rare";
-    if (level < 7) return "Uncommon";
-    return "Common";
+    if (level == 0) return "绝无仅有";
+    if (level < 3) return "罕见";
+    if (level < 7) return "稀少";
+    return "常见";
   }
 
   mapChanceData() {
