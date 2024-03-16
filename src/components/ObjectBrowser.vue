@@ -7,22 +7,22 @@
     </div>
 
     <div v-if="showBiomes" class="biomes">
-      <div class="biomesTitle">Biomes</div>
+      <div class="biomesTitle">生物群落</div>
       <BiomeList />
     </div>
 
     <div class="objectListWrapper">
       <div class="objectListHeader">
         <div class="objectListSorter">
-          Sort by:
-          <span @click="sort('recent', false)" :class="{selected: sortBy == 'recent'}">Recent</span>,
-          <span @click="sort('difficulty', false)" :class="{selected: sortBy == 'difficulty'}">Difficulty</span>,
-          <span @click="sort('name', false)" :class="{selected: sortBy == 'name'}">Name</span>
+          排序:
+          <span @click="sort('recent', false)" :class="{selected: sortBy == 'recent'}">日期</span>,
+          <span @click="sort('difficulty', false)" :class="{selected: sortBy == 'difficulty'}">难度</span>,
+          <span @click="sort('name', false)" :class="{selected: sortBy == 'name'}">名称</span>
         </div>
         <div class="objectListSorter">
-          Order:
-          <span @click="sort(sortBy, false)" :class="{selected: !descending}">Asc</span>,
-          <span @click="sort(sortBy, true)" :class="{selected: descending}">Desc</span>
+          顺序:
+          <span @click="sort(sortBy, false)" :class="{selected: !descending}">升序</span>,
+          <span @click="sort(sortBy, true)" :class="{selected: descending}">降序</span>
         </div>
       </div>
       <div class="objectList">

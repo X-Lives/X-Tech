@@ -135,18 +135,18 @@ class ChangeLogCommit {
 
   ignoredAttributes() {
     return [
-      "slotPos",
-      "pixHeight",
-      "parent",
-      "sounds",
-      "useVanishIndex",
-      "useAppearIndex",
-      "heldOffset",
-      "creationSoundInitialOnly",
-      "floorHugging",
-      "vertSlotRot",
-      "permanent",
-      "drawBehindPlayer"
+      "存储槽位",
+      "像素高度",
+      "父级",
+      "音效",
+      "耐久消失指数",
+      "耐久出现指数",
+      "持有偏移量",
+      "仅创建初始声音",
+      "地板Hugging", //floorHugging
+      "插槽旋转",
+      "不可移动",
+      "绘制在玩家后面"
     ];
   }
 

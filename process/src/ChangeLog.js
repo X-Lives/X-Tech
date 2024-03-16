@@ -64,7 +64,7 @@ class ChangeLog {
 
   reportMissing() {
     const objects = Object.values(this.objects).filter(o => !o.version);
-    console.log(objects.length + " objects are missing version");
+    console.log(objects.length + " 个物体缺少版本号");
     // for (let object of objects) {
     //   console.log(object.id, object.name, "unable to determine version");
     // }

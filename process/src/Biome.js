@@ -22,7 +22,7 @@ class Biome {
   }
 
   name() {
-    const names = ["Grasslands", "Swamps", "Yellow Prairies", "Badlands", "Tundra", "Desert", "Jungle", "Deep Water", "Flower Fields", "Shallow Water"];
+    const names = ["草地", "沼泽", "疏林草原", "荒地", "冻原", "沙漠", "雨林", "深水", "草甸", "浅水"];
     return names[this.id];
   }
 

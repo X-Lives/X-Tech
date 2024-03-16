@@ -14,7 +14,8 @@ class ChangeLogVersion {
     if (this.id == 0) return "OneLife_vStart";
     if (this.isUnreleased()) return "master";
     if (this.id < 20269) return "OneLife_v" + this.id;
-    return "2HOL_v" + this.id;
+    if (this.id < 40000) return "2HOL_v" + this.id;
+    return "XLives_v" + this.id;
   }
 
   populateObjects() {

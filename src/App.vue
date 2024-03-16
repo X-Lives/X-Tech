@@ -1,18 +1,18 @@
 <template>
   <div id="app">
     <h1>
-      <router-link to="/">Crafting Reference for {{gameName}}</router-link>
+      <router-link to="/">{{gameName}} 合成指南</router-link>
     </h1>
 
-    <h2 v-if="loading">Loading...</h2>
+    <h2 v-if="loading">加载中...</h2>
 
     <div v-else>
 
       <div v-if="onEdge">
-        <div class="edgeTitle">Browsing Unreleased</div>
+        <div class="edgeTitle">正在浏览未发布的内容</div>
         <div class="subtitle">
           <span v-if="showWhatsNew">
-            <router-link to="/versions">What's new in Unreleased</router-link>
+            <router-link to="/versions">未发布的新内容</router-link>
             |
           </span>
           <a :href="releasedContentUrl()">
@@ -21,15 +21,15 @@
         </div>
       </div>
       <div class="subtitle" v-else-if="gameUrl">
-        <a :href="gameUrl">Visit {{gameName}}</a>
+        <a :href="gameUrl">进入 {{gameName}} 官网</a>
       </div>
       <div class="subtitle" v-else>
         <span v-if="showWhatsNew">
-          <router-link to="/versions">What's new in v{{latestVersion}}</router-link>
+          <router-link to="/versions">新内容在 v{{latestVersion}}</router-link>
           |
         </span>
         <a :href="unreleasedContentUrl()">
-          See Unreleased Content
+          查看未发布内容
         </a>
       </div>
 
@@ -74,9 +74,9 @@ export default {
   computed: {
     lastDate() {
       const months = [
-        "January", "February", "March",
-        "April", "May", "June", "July",
-        "August", "September", "October",
+        "一月", "二月", "三月",
+        "四月", "五月", "六月", "七月",
+        "八月", "September", "October",
         "November", "December"
       ];
       var month = GameObject.date.getMonth();
@@ -95,7 +95,7 @@ export default {
       return true;
     },
     gameName() {
-      return process.env.ONETECH_MOD_NAME || "Two Hours One Life";
+      return process.env.ONETECH_MOD_NAME || "XLives";
     },
     gameUrl() {
       return process.env.ONETECH_MOD_URL;
@@ -116,12 +116,12 @@ export default {
       return "https://edge.twotech.twohoursonelife.com" + window.location.pathname;
     },
     releasedContentUrl() {
-      return "https://twotech.twohoursonelife.com" + window.location.pathname;
+      return "https://xlives.top" + window.location.pathname;
     }
   },
   metaInfo: {
-    title: "Crafting reference for Two Hours One Life",
-    titleTemplate: '%s | twotech'
+    title: "{{gameName}} 合成指南",
+    titleTemplate: '%s | X-Tech'
   },
   routes: [
     {path: "/", component: ObjectBrowser},

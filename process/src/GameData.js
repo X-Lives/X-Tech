@@ -57,7 +57,7 @@ class GameData {
         this.objects[object.id] = object;
       }
     });
-    console.log("Object Count: " + Object.values(this.objects).length);
+    console.log("物体数目: " + Object.values(this.objects).length);
   }
 
   importCategories() {
@@ -66,7 +66,7 @@ class GameData {
       category.addToObjects(this.objects);
       this.categories.push(category);
     });
-    console.log("Category Count: " + this.categories.length);
+    console.log("类别数目数目: " + this.categories.length);
   }
 
   importTransitions() {
@@ -79,7 +79,7 @@ class GameData {
     importer.mergeAttackTransitions();
     importer.addToObjects(this.objects);
     importer.addGlobalTriggers(this.objects);
-    console.log("Transition Count: " + importer.transitions.length);
+    console.log("转换数目: " + importer.transitions.length);
   }
 
   importBiomes() {
@@ -99,7 +99,7 @@ class GameData {
     for (let biome of this.biomes) {
       biome.addObjects(objects);
     }
-    console.log("Biome Count: " + this.biomes.length);
+    console.log("生物群落数目: " + this.biomes.length);
   }
 
   populateVersions() {

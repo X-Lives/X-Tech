@@ -2,7 +2,7 @@
 
 const Clothing = {
   key: "clothing",
-  name: "Clothing",
+  name: "衣物",
   filter(objects) {
     return objects.filter(o => o.isClothing());
   }
@@ -10,7 +10,7 @@ const Clothing = {
 
 const Food = {
   key: "food",
-  name: "Food",
+  name: "食物",
   filter(objects) {
     return objects.filter(o => o.data.foodValue[0] > 0);
   }
@@ -18,7 +18,7 @@ const Food = {
 
 const Tools = {
   key: "tools",
-  name: "Tools",
+  name: "工具",
   filter(objects) {
     return objects.filter(o => o.isTool());
   }
@@ -26,7 +26,7 @@ const Tools = {
 
 const Containers = {
   key: "containers",
-  name: "Containers",
+  name: "容器",
   filter(objects) {
     return objects.filter(o => o.isCraftableContainer());
   }
@@ -34,7 +34,7 @@ const Containers = {
 
 const HeatSources = {
   key: "heat",
-  name: "Heat Sources",
+  name: "热源",
   filter(objects) {
     return objects.filter(o => o.data.heatValue > 0);
   }
@@ -42,7 +42,7 @@ const HeatSources = {
 
 const WaterSources = {
   key: "water",
-  name: "Water Sources",
+  name: "水源",
   filter(objects) {
     return objects.filter(o => o.isWaterSource());
   }
@@ -50,7 +50,7 @@ const WaterSources = {
 
 const Natural = {
   key: "natural",
-  name: "Natural",
+  name: "自然",
   filter(objects) {
     return objects.filter(o => o.isNatural());
   }

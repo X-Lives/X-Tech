@@ -72,7 +72,7 @@ class DepthCalculator {
 
   reportUncraftable() {
     const objects = this.objects.filter(o => !o.depth.craftable && o.isVisible());
-    console.log(objects.length + " objects are uncraftable");
+    console.log(objects.length + " 个物体是不可制作的");
     // for (let object of objects) {
     //   console.log(object.id, object.name, "unable to calculate depth");
     // }

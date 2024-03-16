@@ -16,7 +16,7 @@
     <div v-else class="steps">
       <RecipeIngredients v-if="object.data.recipe.ingredients" :ingredients="object.data.recipe.ingredients" :rightClickObject="filterObject" />
 
-      <RecipeIngredients v-if="object.data.recipe.uncraftables" title="UNCRAFTABLE Ingredients" :ingredients="object.data.recipe.uncraftables" :rightClickObject="filterObject" />
+      <RecipeIngredients v-if="object.data.recipe.uncraftables" title="不可合成原料" :ingredients="object.data.recipe.uncraftables" :rightClickObject="filterObject" />
 
       <div class="filterHeadline" v-if="filteredObject">
         <h4>Filter:</h4>

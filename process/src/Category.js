@@ -43,15 +43,15 @@ class Category {
 
   addToObjects(objects) {
     this.parent = objects[this.parentID];
-    if (!this.parent) throw "Unable to find object with id " + this.parentID;
+    if (!this.parent) throw "无法找到物体(id)" + this.parentID;
     this.parent.category = this;
     this.objects = [];
     for (let id of this.objectIDs) {
       const object = objects[id];
       if (!object) {
-        console.log(`Invalid object id ${id} in categories/${this.parentID}.txt`)
+        console.log(`类别/${this.parentID}.txt 中的物体 ID ${id} 无效`)
       } else if (object == this.parent) {
-        console.log(`A category should not reference itself in categories/${this.parentID}.txt`)
+        console.log(`类别不应在 categories/${this.parentID}.txt 中引用自身`)
       } else {
         this.objects.push(object);
         object.categories.push(this);

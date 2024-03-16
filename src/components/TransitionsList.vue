@@ -9,7 +9,7 @@
     </div>
     <div v-if="canShowMore" class="showMoreWrapper">
       <span class="showMore" @click="expand">
-        Show more ways...
+        展示更多方式...
       </span>
     </div>
   </div>

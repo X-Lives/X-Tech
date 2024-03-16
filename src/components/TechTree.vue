@@ -1,7 +1,7 @@
 <template>
   <div class="techTree">
     <h2><router-link :to="object.url()">{{object.name}}</router-link></h2>
-    <h3>Tech Tree</h3>
+    <h3>科技树</h3>
 
     <TechTreeView :object="object" />
   </div>
@@ -31,7 +31,7 @@ export default {
     }
   },
   metaInfo() {
-    return {title: `${this.object.name} Tech Tree`};
+    return {title: `${this.object.name} 科技树`};
   }
 }
 </script>

@@ -2,7 +2,7 @@
   <div class="ingredients">
     <h4>{{titleWithDefault}}</h4>
     <div class="filterInstructions">
-      right click to filter recipe
+      右键单击以过滤食谱
     </div>
     <div class="ingredientObjects">
       <ObjectImage
@@ -34,7 +34,7 @@ export default {
       return uniqueIDs.map(id => GameObject.find(id))
     },
     titleWithDefault() {
-      return this.title || "Ingredients";
+      return this.title || "原料";
     }
   },
   methods: {
